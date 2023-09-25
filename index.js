@@ -9,10 +9,10 @@ const port = 4500;
 app.set("port", port);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "../contact.html")));
+app.use(express.static(path.join(__dirname, "./contact.html")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../contact.html"));
+  res.sendFile(path.join(__dirname, "./contact.html"));
 });
 app.post("/send_mail", (req, res) => {
   const transporter = nodemailer.createTransport({
