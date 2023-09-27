@@ -37,7 +37,7 @@ app.post("/send_mail", (req, res) => {
       console.log(error);
     } else {
       console.log("Email send" + info.response);
-     
+      res.send("Message sent successfully. Kindly go back to contact page."); 
     }
     res.redirect("/");
   });
